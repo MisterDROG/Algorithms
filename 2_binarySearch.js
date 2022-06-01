@@ -9,7 +9,7 @@ function binarySearch(massive, item) {
     console.log(middle)
     console.log(massive[middle])
     while (start <= end) {
-        middle = Math.floor((start+end) / 2)
+        middle = Math.floor((start + end) / 2)
         console.log('start', start)
         console.log('middle', middle)
         console.log('end', end)
@@ -25,3 +25,16 @@ function binarySearch(massive, item) {
 }
 
 console.log(binarySearch(mas, 2))
+
+function recursiveBinarySearch(massive, item, start, end) {
+    let middle = Math.floor((start + end) / 2)
+    if (massive[middle] === item) {
+        return middle
+    } else if (massive[middle] < item) {
+        return recursiveBinarySearch(massive, item, (middle + 1), end)
+    } else if (massive[middle] > item) {
+        return recursiveBinarySearch(massive, item, start, (middle - 1))
+    }
+}
+
+console.log(recursiveBinarySearch(mas, 3, 0, (mas.length - 1)))
