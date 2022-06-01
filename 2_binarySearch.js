@@ -5,7 +5,7 @@ function binarySearch(massive, item) {
     let end = massive.length - 1
     console.log('start', start)
     console.log('end', end)
-    middle = Math.floor(massive.length / 2)
+    let middle = Math.floor(massive.length / 2)
     console.log(middle)
     console.log(massive[middle])
     while (start <= end) {
