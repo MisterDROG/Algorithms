@@ -21,6 +21,7 @@ function fastSort(arr) {
         }   
     }
     return [...fastSort(less), middle, ...fastSort(more)]
+    
 }   
 
 console.log(fastSort(arrayOne))
