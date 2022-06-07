@@ -9,11 +9,13 @@ graph.f = ['g']
 
 function poiskVshirinu(graph, start, end) {
     console.log('start', start, 'end', end)
+
+    let keys = Object.keys(graph)
+    console.log(keys)
+
     let queue = []
     let currentPoint = start
     queue.push(...graph[currentPoint])
-    let keys = Object.keys(graph)
-    console.log(keys)
 
     while (currentPoint !== end) {
         console.log('ИТЕРАЦИЯ')
@@ -26,7 +28,7 @@ function poiskVshirinu(graph, start, end) {
         queue.push(...graph[currentPoint])
 
         console.log('очередь после', queue)
-        
+
         if (queue.length == 0) {
             return false
         }
