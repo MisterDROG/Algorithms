@@ -43,7 +43,7 @@ function treeSum (tree) {
     tree.forEach((key) => {
         sum += key.v
         if (!key.c) {
-            return node.v
+            return
         }
         sum += treeSum(key.c)
     })
